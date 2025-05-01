@@ -6,8 +6,8 @@
     <title>Grandhalaya</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-</head>
-<body>
+</head> 
+<body>   
     <div class="container">
         <h1>📚 Book Manager</h1>
         
@@ -26,7 +26,8 @@
         </div>
     </div>
 
-    <script src="document.addEventListener('DOMContentLoaded', () => {
+    <script > 
+        document.addEventListener('DOMContentLoaded', () => {
     const addBookForm = document.getElementById('addBookForm');
     const booksContainer = document.getElementById('booksContainer');
 
@@ -106,9 +107,8 @@ window.saveBook = async (id) => {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(updatedBook)
-    });
-
+    })
     location.reload();
-};"></script>
+};</script>
 </body>
 </html>
