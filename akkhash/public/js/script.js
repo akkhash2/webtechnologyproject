@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const booksContainer = document.getElementById('booksContainer');
 
     const fetchBooks = async () => {
-        const response = await fetch('/books');
+        const response = await fetch('https://webtechnologyproject.onrender.com/books');
         const books = await response.json();
         renderBooks(books);
     };
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             author: document.getElementById('author').value
         };
 
-        await fetch('/books', {
+        await fetch('https://webtechnologyproject.onrender.com/books', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.deleteBook = async (id) => {
-    await fetch(`/books/${id}`, { method: 'DELETE' });
+    await fetch(`https://webtechnologyproject.onrender.com/books/${id}`, { method: 'DELETE' });
     location.reload();
 };
 
@@ -72,7 +72,7 @@ window.saveBook = async (id) => {
         author: form.querySelector('input:nth-child(2)').value
     };
 
-    await fetch(`/books/${id}`, {
+    await fetch(`https://webtechnologyproject.onrender.com/books/${id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
