@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'views')));
 
-mongoose.connect('/nikhildb')
+mongoose.connect('mongodb+srv://pillaakkhash:akkhash@webdevproject.krh9hxd.mongodb.net/?retryWrites=true&w=majority&appName=webdevproject/nikhildb')
   .then(() => console.log('✅ Connected to MongoDB'))
   .catch((error) => console.error('❌ MongoDB connection failed:', error));
 
